@@ -4,7 +4,7 @@ package goutil
 
 // 参数:传入年月 如:201305 类型:int
 // 返回:现在到未来12个月的日期
-func IncreaseData(yearmonth int) (result []int) {
+func IncreaseDate(yearmonth int) (result []int) {
 	// 取得日期中的月
 	var month = yearmonth % 100
 	for i := 0; i < 12; i++ {
@@ -20,7 +20,7 @@ func IncreaseData(yearmonth int) (result []int) {
 
 // 参数:传入年月 如:201305 类型:int
 // 返回:从现在到过去12个月的日期
-func DecreaseData(yearmonth int) (result []int) {
+func DecreaseDate(yearmonth int) (result []int) {
 	// 取得日期中的月
 	var month = yearmonth % 100
 	for i := 0; i < 12; i++ {
