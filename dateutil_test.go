@@ -7,7 +7,7 @@ import (
 var nowDate int = 201409
 
 func TestIncreaseDate(t *testing.T) {
-	list := IncreaseData(nowDate)
+	list := IncreaseDate(nowDate)
 	if 12 != len(list) {
 		t.Errorf("generate error:%v", list)
 	}
@@ -15,12 +15,12 @@ func TestIncreaseDate(t *testing.T) {
 
 func BenchmarkIncreateDate(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		IncreaseData(nowDate)
+		IncreaseDate(nowDate)
 	}
 }
 
 func TestDecreaseDate(t *testing.T) {
-	list := DecreaseData(nowDate)
+	list := DecreaseDate(nowDate)
 	if 12 != len(list) {
 		t.Errorf("generate error:%v", list)
 	}
@@ -28,6 +28,6 @@ func TestDecreaseDate(t *testing.T) {
 
 func BenchmarkDecreateDate(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		DecreaseData(nowDate)
+		DecreaseDate(nowDate)
 	}
 }
